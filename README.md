@@ -53,7 +53,7 @@ To set up RecommenderBERT for any recommendation task:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/xai/RecommenderBERT.git](https://github.com/xai/RecommenderBERT.git)
+git clone [https://github.com/xai/RecommenderBERT.git](https://github.com/mohamadmorady412/RecommenderBERT.git)
 
 # Navigate to the project directory
 cd RecommenderBERT
