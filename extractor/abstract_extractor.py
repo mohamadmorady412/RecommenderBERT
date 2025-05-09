@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Any, List
+from constants import FORMAT_TEXT
 
 class AbstractExtractor(ABC):
     """Abstract base class for extractors."""
@@ -14,6 +15,6 @@ class AbstractExtractor(ABC):
         """Format extracted data into the desired output."""
         pass
 
-    def process_posts(self, posts: List[Dict[str, Any]], format_type: str = 'text') -> List[str]:
+    def process_posts(self, posts: List[Dict[str, Any]], format_type: str = FORMAT_TEXT) -> List[str]:
         """Process multiple posts and return formatted outputs."""
         return [self.format_output(self.extract(post), format_type) for post in posts]
