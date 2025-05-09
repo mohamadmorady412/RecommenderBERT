@@ -1,0 +1,36 @@
+{
+    "plugin_name": "sample_plugin",
+    "version": "1.0",
+    "fields": [
+        {
+            "name": "title",
+            "type": "string",
+            "required": true,
+            "extractor": "post.title || post.headline"
+        },
+        {
+            "name": "description",
+            "type": "string",
+            "required": false,
+            "extractor": "post.body || post.summary"
+        },
+        {
+            "name": "hashtags",
+            "type": "array",
+            "required": false,
+            "extractor": "post.tags || []"
+        },
+        {
+            "name": "author",
+            "type": "string",
+            "required": false,
+            "extractor": "post.author || 'Unknown'"
+        },
+        {
+            "name": "timestamp",
+            "type": "string",
+            "required": false,
+            "extractor": "post.created_at || ''"
+        }
+    ]
+}
